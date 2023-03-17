@@ -12,12 +12,16 @@ function App() {
     setInput("");
 
     try {
-      const response = await axios.post(process.env.REACT_APP_API_URL, {
+      const response = await axios.post('/api/chat', {
         messages: [...messages, { role: "user", content: input }],
       });
-
-      const assistantMessage = response.data.choices[0].message;
-      setMessages([...messages, { role: "user", content: input }, assistantMessage]);
+    
+      if (response.data.choices && response.data.choices.length > 0) {
+        const assistantMessage = response.data.choices[0].message;
+        setMessages([...messages, { role: "user", content: input }, assistantMessage]);
+      } else {
+        console.error("Error: Unexpected response from the GPT-4 API:", response.data);
+      }
     } catch (error) {
       console.error("Error:", error);
     }
