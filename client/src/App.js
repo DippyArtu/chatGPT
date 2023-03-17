@@ -12,7 +12,7 @@ function App() {
     setInput("");
 
     try {
-      const response = await axios.post("http://localhost:3001/api/chat", {
+      const response = await axios.post(process.env.REACT_APP_API_URL, {
         messages: [...messages, { role: "user", content: input }],
       });
 
