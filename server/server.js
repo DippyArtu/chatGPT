@@ -11,6 +11,7 @@ app.use(express.json());
 const API_KEY = process.env.API_KEY;
 const GPT_4_API_URL = "https://api.openai.com/v1/chat/completions";
 
+app.get('/api', (req, res) => res.status(200).send('API is working'));
 app.post("/api/chat", async (req, res) => {
   try {
     const response = await axios.post(
