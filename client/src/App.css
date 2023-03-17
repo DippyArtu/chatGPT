@@ -1,0 +1,75 @@
+body {
+  background-color: #f6f8fa;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: #24292e;
+}
+
+.chat {
+  border: 1px solid #e1e4e8;
+  padding: 20px;
+  border-radius: 6px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.user,
+.assistant {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.user::before {
+  content: "You: ";
+  font-weight: bold;
+  color: #0366d6;
+}
+
+.assistant::before {
+  content: "GPT-4: ";
+  font-weight: bold;
+  color: #6a737d;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  width: 18%;
+  padding: 10px;
+  border: 1px solid #e1e4e8;
+  background-color: #0366d6;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #2188ff;
+}
