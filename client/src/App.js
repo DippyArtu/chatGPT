@@ -12,7 +12,7 @@ function App() {
     setInput("");
 
     try {
-      const response = await axios.post('/api/chat', {
+      const response = await axios.post('http://146.190.204.251:3001/api/chat', {
         messages: [...messages, { role: "user", content: input }],
       });
     
