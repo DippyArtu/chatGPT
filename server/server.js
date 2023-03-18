@@ -30,7 +30,9 @@ app.post("/api/chat", async (req, res) => {
     res.json(response.data);
   } catch (error) {
     console.log("Error:", error.message);
+    console.log("Error data:", error.data);
     res.status(500).json({ message: "Something went wrong" });
+    res.json(error.data);
   }
 });
 

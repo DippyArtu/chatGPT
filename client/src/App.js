@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 
 const SERVER = "https://chatgpt-server-omwj.onrender.com/api/chat";
+// const SERVER = "http://localhost:3001/api/chat"; // dev
 
 function App() {
   const [messages, setMessages] = useState([]);
