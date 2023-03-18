@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-const SERVER = "https://chatgpt-server-omwj.onrender.com/api/chat";
+const SERVER = "https://dry-wildflower-3837.fly.dev/api/chat";
 // const SERVER = "http://localhost:3001/api/chat"; // dev
 
 function App() {
