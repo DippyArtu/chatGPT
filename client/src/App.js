@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
+const SERVER = "https://chatgpt-server-omwj.onrender.com/api/chat";
+
 function App() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -12,7 +14,7 @@ function App() {
     setInput("");
 
     try {
-      const response = await axios.post('http://146.190.204.251:3001/api/chat', {
+      const response = await axios.post(SERVER, {
         messages: [...messages, { role: "user", content: input }],
       });
     

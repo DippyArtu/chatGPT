@@ -1,4 +1,6 @@
 require('dotenv').config();
+const dotenvResult = require('dotenv').config();
+console.log(dotenvResult);
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
